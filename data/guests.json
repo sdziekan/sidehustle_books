@@ -1,0 +1,48 @@
+[
+    {
+        "gName": "Kevin Rose",
+        "gEpisode": "EPISODE 1: KEVIN ROSE",
+        "gBooks": [
+            "Venture Deals"
+        ]
+    },
+    {
+        "gName": "Joshua Waitzkin",
+        "gEpisode": "EPISODE 2: JOSH WAITZKIN",
+        "gBooks": [
+            "The Art of Learning",
+            "On the Road",
+            "Dharma Bums",
+            "Tao te Ching",
+            "Zen and the Art of Motorcycle Maintenance",
+            "Shantaram",
+            "For Whom the Bell Tolls",
+            "Green Hills of Africa",
+            "Complete Collection of Short Stories",
+            "Old Man and the Sea",
+            "A Moveable Feast",
+            "Ernest Hemingway on Writing"
+        ]
+    },
+    {
+        "gName": "Ryan Holiday",
+        "gEpisode": "The Tim Ferriss Podcast, Episode 4: Ryan Holiday",
+        "gBooks": [
+            "The Obstacle Is the Way: The Timeless Art of Turning Trials into Triumph",
+            "Meditations: A New Translation",
+            "The Art of Living: The Classical Mannual on Virtue, Happiness, and Effectiveness",
+            "The Black Swan",
+            "Fooled by Randomness: The Hidden Role of Chance in Life and in the Markets",
+            "Antifragile: Things That Gain from Disorder",
+            "The Fish That Ate the Whale: The Life and Times of America's Banana King",
+            "Tough Jews : Fathers, Sons, and Gangster Dreams",
+            "Edison - A Biography",
+            "Ulysses S. Grant: Triumph Over Adversity, 1822-1865",
+            "Oranges",
+            "Levels of the Games",
+            "The Survival of the Bark Canoe",
+            "The Control of Nature",
+            "Giving Good Weight"
+        ]
+    }
+]
