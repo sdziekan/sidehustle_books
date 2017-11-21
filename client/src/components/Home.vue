@@ -5,20 +5,17 @@
       <v-spacer></v-spacer>
       <v-text-field append-icon="search" label="Search" single-line hide-details v-model="search"></v-text-field>
     </v-card-title>
-    <v-data-table hide-actions v-bind:headers="headers" v-bind:items="items" v-bind:search="search">
+    <v-data-table hide-actions v-bind:headers="headers" v-bind:items="books" v-bind:search="search">
       <template slot="items" slot-scope="props">
-        <td class="text-xs-center">
-          {{ props.item.name }}
-        </td>
-        <td class="text-xs-right">{{ props.item.calories }}</td>
+        <td class="text-xs-center">{{ props.item.bTitle }}</td>
+        <td class="text-xs-right">{{ props.item.bAuthor }}</td>
+        <td class="text-xs-right">{{ props.item.bGuest }}</td>
+        <td class="text-xs-right">{{ props.item.bEpName }}</td>
+        <td class="text-xs-right">{{ props.item.bEpNumber }}</td>
         <td class="text-xs-right">
-          <a v-bind:href="props.item.iron" target=”_blank”>{{ props.item.fat }}</a>
-
+          <a v-bind:href="props.item.bUrl" target=”_blank”>Link to Buy</a>
         </td>
-        <td class="text-xs-right">{{ props.item.carbs }}</td>
-        <td class="text-xs-right">{{ props.item.protein }}</td>
-        <td class="text-xs-right">{{ props.item.sodium }}</td>
-        <td class="text-xs-right">{{ props.item.calcium }}</td>
+        <td class="text-xs-right">{{ props.item.bShowNotes }}</td>
 
       </template>
 
@@ -27,6 +24,8 @@
 </template>
 
 <script>
+import axios from "axios";
+import api from "./api";
 
 export default {
   name: 'Home',
@@ -34,19 +33,16 @@ export default {
     return {
       msg: 'Welcome to Your HomePage',
       tmp: '',
+      books: [],
       search: '',
       headers: [
-        {
-          text: 'Dessert (100g serving)',
-          align: 'left',
-          value: 'name'
-        },
-        { text: 'Calories', value: 'calories' },
-        { text: 'Fat (g)', value: 'fat' },
-        { text: 'Carbs (g)', value: 'carbs' },
-        { text: 'Protein (g)', value: 'protein' },
-        { text: 'Sodium (mg)', value: 'sodium' },
-        { text: 'Calcium (%)', value: 'calcium' }
+        { text: 'Book Title', align: 'left', value: 'bTitle' },
+        { text: 'Author', value: 'bAuthor' },
+        { text: 'Guest', value: 'bGuest' },
+        { text: 'Episode', value: 'bEpName' },
+        { text: 'Edition', value: 'bEpNumber' },
+        { text: 'Book link', value: 'bUrl' },
+        { text: 'Show Notes', value: 'bShowNotes' }
       ],
       items: [
         {
@@ -161,6 +157,12 @@ export default {
         }
       ]
     }
+  },
+  created() {
+    // function that GETS books from API
+    api.getBooks().then(books => {
+      this.books = books;
+    });
   },
   computed: {
     //function to place items within an array each on their own line

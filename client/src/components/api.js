@@ -11,6 +11,12 @@ function getBook(bookID) {
     });
 };
 
+function getBooks() {
+    return myApi.get("/books/").then(response => {
+        return response.data;
+    });
+};
+
 function getGuest(guestID) {
     return myApi.get("/guests/" + guestID).then(response => {
         return response.data;
@@ -19,5 +25,6 @@ function getGuest(guestID) {
 
 export default {
     getBook,
+    getBooks,
     getGuest
 }
