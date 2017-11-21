@@ -2,22 +2,32 @@ const mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 const EpisodeSchema = new Schema({
-    epTitle: {
-        type: String,
-        required: [true, "epTitle is required"]
+    eNumber: {
+        type: String
     },
-    epUrl: {
-        type: String,
-        required: [true, "epUrl is required"]
+    eName: {
+        type: String
     },
-    epGuest: [
-        {
-            type: String,
-            required: [true, "epGuest is required"]
-        }
-    ],
-    date: {
+    eDescription:
+    {
+        type: String
+    },
+    eDate: {
         type: Date
-    }
+    },
+    eGuest: {
+        type: String
+    },
+    eEpisode: {
+        type: String
+    },
+    eURL: {
+        type: String
+    },
+    eBooks: [
+        {
+            type: String
+        }
+    ]
 });
 module.exports = mongoose.model("Episode", EpisodeSchema);

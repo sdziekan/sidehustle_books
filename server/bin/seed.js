@@ -5,9 +5,9 @@ var Book = require("../models/Book.js");
 var Episode = require("../models/Episode.js");
 var Guest = require("../models/Guest.js");
 
-var allBooks = require("../../data/books.json");
-var allEpisodes = require("../../data/episodes.json");
-var allGuests = require("../../data/guests.json");
+var allBooks = require("../../data/books25.json");
+var allEpisodes = require("../../data/episodes25.json");
+var allGuests = require("../../data/guests25.json");
 
 Book.insertMany(allBooks, (error, docs) => {
     if (error) console.log(error);

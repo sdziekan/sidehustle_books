@@ -1,38 +1,38 @@
 [
     {
-        "title": "The Black Swan",
-        "author": "Nassim Nicholas Taleb",
-        "episode": [
+        "bTitle": "The Black Swan",
+        "bAuthor": "Nassim Nicholas Taleb",
+        "bEpName": [
             "The Tim Ferriss Podcast, Episode 4: Ryan Holiday",
             "EPISODE 2: JOSH WAITZKIN",
             "Ep 21: Mike Shinoda of Linkin Park"
         ]
     },
     {
-        "title": "The Art of Learning",
-        "author": "Joshua Waitzkin",
-        "episode": [
+        "bTitle": "The Art of Learning",
+        "bAuthor": "Joshua Waitzkin",
+        "bEpName": [
+            "bEpName 2: JOSH WAITZKIN"
+        ]
+    },
+    {
+        "bTitle": "Green Hills of Africa",
+        "bAuthor": "Ernest Hemingway",
+        "bEpName": [
             "EPISODE 2: JOSH WAITZKIN"
         ]
     },
     {
-        "title": "Green Hills of Africa",
-        "author": "Ernest Hemingway",
-        "episode": [
-            "EPISODE 2: JOSH WAITZKIN"
-        ]
-    },
-    {
-        "title": "Venture Deals",
-        "author": "Brad Feld",
-        "episode": [
+        "bTitle": "Venture Deals",
+        "bAuthor": "Brad Feld",
+        "bEpName": [
             "EPISODE 1: KEVIN ROSE"
         ]
     },
     {
-        "title": "Oranges",
-        "author": "John McPhee",
-        "episode": [
+        "bTitle": "Oranges",
+        "bAuthor": "John McPhee",
+        "bEpName": [
             "The Tim Ferriss Podcast, Episode 4: Ryan Holiday"
         ]
     }

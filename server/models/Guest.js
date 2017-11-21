@@ -3,15 +3,14 @@ var Schema = mongoose.Schema;
 
 const GuestSchema = new Schema({
     gName: {
-        type: String,
-        required: [true, "gName is required"]
+        type: String
     },
     gEpisode: [
         {
             type: String
         }
     ],
-    gBooks: [
+    gEpisodeNum: [
         {
             type: String
         }
