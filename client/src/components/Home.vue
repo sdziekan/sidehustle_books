@@ -7,16 +7,16 @@
     </v-card-title>
     <v-data-table hide-actions v-bind:headers="headers" v-bind:items="books" v-bind:search="search">
       <template slot="items" slot-scope="props">
-        <td class="text-xs-center">{{ props.item.bTitle }}</td>
+        <td class="text-xs-center">
+          <a v-bind:href="props.item.bUrl" target=”_blank”>{{ props.item.bTitle }}</a>
+        </td>
         <td class="text-xs-right">{{ props.item.bAuthor }}</td>
         <td class="text-xs-right">{{ props.item.bGuest }}</td>
-        <td class="text-xs-right">{{ props.item.bEpName }}</td>
-        <td class="text-xs-right">{{ props.item.bEpNumber }}</td>
-        <td class="text-xs-right">
-          <a v-bind:href="props.item.bUrl" target=”_blank”>Link to Buy</a>
-        </td>
-        <td class="text-xs-right">{{ props.item.bShowNotes }}</td>
+        <td class="text-xs-center">{{ props.item.bEpNumber }}</td>
 
+        <td class="text-xs-right">
+          <a v-bind:href="props.item.bShowNotes" target=”_blank”>Link to Show Notes</a>
+        </td>
       </template>
 
     </v-data-table>
@@ -39,10 +39,8 @@ export default {
         { text: 'Book Title', align: 'left', value: 'bTitle' },
         { text: 'Author', value: 'bAuthor' },
         { text: 'Guest', value: 'bGuest' },
-        { text: 'Episode', value: 'bEpName' },
-        { text: 'Edition', value: 'bEpNumber' },
-        { text: 'Book link', value: 'bUrl' },
-        { text: 'Show Notes', value: 'bShowNotes' }
+        { text: 'Episode Number', value: 'bEpNumber' },
+        { text: 'Show Notes', sortable: false, value: 'bShowNotes' }
       ],
       items: [
         {

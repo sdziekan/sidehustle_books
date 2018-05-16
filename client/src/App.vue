@@ -15,4 +15,7 @@ export default {
 
 <style lang="stylus">
   @require './stylus/main'
+  img 
+    margin-left 25%
+
 </style>
