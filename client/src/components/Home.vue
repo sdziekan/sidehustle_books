@@ -1,26 +1,32 @@
 <template>
-  <v-card>
-    <v-card-title>
+  <v-layout>
+    <v-flex>
+      <v-card>
+        <img src="../assets/3redbooks-300px.png">
+        <v-card-title>
 
-      <v-spacer></v-spacer>
-      <v-text-field append-icon="search" label="Search" single-line hide-details v-model="search"></v-text-field>
-    </v-card-title>
-    <v-data-table hide-actions v-bind:headers="headers" v-bind:items="books" v-bind:search="search">
-      <template slot="items" slot-scope="props">
-        <td class="text-xs-center">
-          <a v-bind:href="props.item.bUrl" target=”_blank”>{{ props.item.bTitle }}</a>
-        </td>
-        <td class="text-xs-right">{{ props.item.bAuthor }}</td>
-        <td class="text-xs-right">{{ props.item.bGuest }}</td>
-        <td class="text-xs-center">{{ props.item.bEpNumber }}</td>
+          <v-spacer></v-spacer>
+          <v-spacer></v-spacer>
+          <v-text-field append-icon="search" label="Search" single-line hide-details v-model="search"></v-text-field>
+        </v-card-title>
+        <v-data-table hide-actions v-bind:headers="headers" v-bind:items="books" v-bind:search="search">
+          <template slot="items" slot-scope="props">
+            <td class="text-xs-center">
+              <a v-bind:href="props.item.bUrl" target=”_blank”>{{ props.item.bTitle }}</a>
+            </td>
+            <td class="text-xs-right">{{ props.item.bAuthor }}</td>
+            <td class="text-xs-right">{{ props.item.bGuest }}</td>
+            <td class="text-xs-center">{{ props.item.bEpNumber }}</td>
 
-        <td class="text-xs-right">
-          <a v-bind:href="props.item.bShowNotes" target=”_blank”>Link to Show Notes</a>
-        </td>
-      </template>
+            <td class="text-xs-right">
+              <a v-bind:href="props.item.bShowNotes" target=”_blank”>Link to Show Notes</a>
+            </td>
+          </template>
 
-    </v-data-table>
-  </v-card>
+        </v-data-table>
+      </v-card>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
