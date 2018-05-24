@@ -1,5 +1,5 @@
 <template>
-  <v-layout>
+  <v-layout justify-center align-center>
     <v-flex>
       <v-card>
         <img src="../assets/3redbooks-300px.png">
