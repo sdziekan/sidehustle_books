@@ -5,6 +5,7 @@ import Home from '@/components/Home'
 import Books from '@/components/Books'
 import Guests from '@/components/Guests'
 
+
 Vue.use(Router)
 
 export default new Router({

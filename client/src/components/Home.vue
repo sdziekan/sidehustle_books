@@ -1,5 +1,5 @@
 <template>
-  <v-layout justify-center align-center>
+  <v-layout>
     <v-flex>
       <v-card>
         <img src="../assets/3redbooks-300px.png">
@@ -198,5 +198,10 @@ li {
 
 a {
   color: #42b983;
+}
+
+img {
+  margin: 75px 0 40px 40%;
+  width: 20%;
 }
 </style>
