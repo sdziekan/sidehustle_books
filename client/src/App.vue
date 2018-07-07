@@ -2,21 +2,18 @@
   <v-app>
     <v-app>
       <v-navigation-drawer v-model="drawer1" app>
-        <v-card>
-          <v-list>
-            <v-expansion-panel app>
-              <v-expansion-panel-content v-for="(item,i) in menu" :key="i">
-                <div slot="header"> {{ item.header }}</div>
-                <v-card>
-                  <v-card-text v-text="item.message"></v-card-text>
-                </v-card>
-
-              </v-expansion-panel-content>
-            </v-expansion-panel>
-          </v-list>
-        </v-card>
+        <v-list>
+          <v-expansion-panel app>
+            <v-expansion-panel-content v-for="(item,i) in menu" :key="i">
+              <div slot="header"> {{ item.header }}</div>
+              <v-card>
+                <v-card-text v-text="item.message"></v-card-text>
+              </v-card>
+            </v-expansion-panel-content>
+          </v-expansion-panel>
+        </v-list>
       </v-navigation-drawer>
-      <v-toolbar app fixed dark>
+      <v-toolbar app fixed dark color="blue">
         <v-toolbar-title>Application</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-side-icon @click.stop="drawer1 = !drawer1"></v-toolbar-side-icon>
@@ -27,7 +24,9 @@
         </v-container>
       </v-content>
 
-      <v-footer app inset fixed> 2018</v-footer>
+      <v-footer app inset fixed dark color="blue">
+        <div class="pa-3">2018</div>
+      </v-footer>
 
     </v-app>
     <!-- <v-content>
