@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var mongoose = require("mongoose");
 
 // Mongoose configuration
-mongoose.connect("mongodb://localhost/tf-books");
+mongoose.connect("mongodb://localhost:3000/tf-books");
 
 var index = require('./routes/index');
 var books = require('./routes/books');
