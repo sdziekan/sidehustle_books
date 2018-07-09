@@ -2,7 +2,7 @@
   <v-layout>
     <v-flex>
       <v-card>
-        <img src="../assets/3redbooks-300px.png">
+        <!-- <img src="../assets/3redbooks-300px.png"> -->
         <v-card-title>
 
           <v-spacer></v-spacer>
