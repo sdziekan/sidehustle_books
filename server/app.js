@@ -9,7 +9,7 @@ var mongoose = require("mongoose");
 // Mongoose configuration
 mongoose.connect("mongodb://localhost:3000/tf-books");
 
-var index = require('./routes/index');
+// var index = require('./routes/index');
 var books = require('./routes/books');
 var episodes = require('./routes/episodes');
 var guests = require('./routes/guests');
@@ -35,10 +35,10 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/', index);
-app.use('/api/books', books);
-app.use('/api/episodes', episodes);
-app.use('/api/guests', guests);
+// app.use('/', index);
+app.use('/api/books/', books);
+app.use('/api/episodes/', episodes);
+app.use('/api/guests/', guests);
 
 const history = require('express-history-api-fallback')
 
