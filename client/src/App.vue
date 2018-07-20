@@ -41,7 +41,7 @@ export default {
   name: 'app',
 
   data: () => ({
-    toolbar_title: "Tim Ferriss Show Book Recommendations",
+    toolbar_title: 'Tim Ferriss Show Book Recommendations',
     drawer: null,
     props: {
       source: String
