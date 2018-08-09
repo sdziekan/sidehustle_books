@@ -43,36 +43,35 @@
 
 <script>
 
-import api from "./api";
+import api from './api'
 export default {
-    name: 'Guests',
-    data() {
-        return {
-            msg: 'Episode Guests',
-            guests: "",
-            books: "",
-            headers: [
-                { text: 'Name', align: 'left', value: 'gName' },
-                { text: 'Episode', value: 'gEpisode' },
-                { text: 'Books', value: 'gBooks' }
-            ]
-        }
-    },
-
-    created() {
-
-        api.getGuest(this.$route.params.guestID).then(guest => {
-            this.guest = guest;
-        });
-    },
-    computed: {
-
-    },
-    methods: {
-        setView(arg) {
-            this.seen = arg;
-        }
+  name: 'Guests',
+  data () {
+    return {
+      msg: 'Episode Guests',
+      guests: '',
+      books: '',
+      headers: [
+        { text: 'Name', align: 'left', value: 'gName' },
+        { text: 'Episode', value: 'gEpisode' },
+        { text: 'Books', value: 'gBooks' }
+      ]
     }
+  },
+
+  created () {
+    api.getGuest(this.$route.params.guestID).then(guest => {
+      this.guest = guest
+    })
+  },
+  computed: {
+
+  },
+  methods: {
+    setView (arg) {
+      this.seen = arg
+    }
+  }
 }
 </script>
 
