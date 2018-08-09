@@ -30,12 +30,12 @@
 </template>
 
 <script>
-import axios from "axios";
-import api from "./api";
+import axios from 'axios'
+import api from './api'
 
 export default {
   name: 'Home',
-  data() {
+  data () {
     return {
       msg: 'Welcome to Your HomePage',
       tmp: '',
@@ -162,21 +162,20 @@ export default {
       ]
     }
   },
-  created() {
+  created () {
     // function that GETS books from API
     api.getBooks().then(books => {
-      this.books = books;
-    });
+      this.books = books
+    })
   },
   computed: {
-    //function to place items within an array each on their own line
-    newLineWithinCell() {
+    // function to place items within an array each on their own line
+    newLineWithinCell () {
 
     }
   }
 
 }
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
